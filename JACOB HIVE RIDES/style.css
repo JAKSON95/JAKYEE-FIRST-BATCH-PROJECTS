@@ -1,0 +1,182 @@
+body {
+    background-image: url('images/background 1.jpg');
+    /* Ensure correct path and quotes */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+    /* Establishes a positioning context */
+    margin: 0;
+    height: 100vh;
+    /* Full viewport height */
+}
+
+h1 {
+    color: rgb(117, 93, 33);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Apply shadow */
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center horizontally */
+    text-align: center;
+    /* Center text within the container */
+    padding: 0;
+    /* Optional padding */
+}
+
+.logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url('logo.png') no-repeat center center;
+    /* Ensure correct path to logo */
+    background-size: cover;
+}
+
+.fly1 {
+    position: absolute;
+    width: 50px;
+    /* Adjust width as needed */
+    height: 50px;
+    /* Adjust height as needed */
+    background: url('fly.png') no-repeat center center;
+    /* Ensure correct path to fly image */
+    background-size: cover;
+    animation: flyPath1 10s alternate-reverse infinite;
+    /* Continuous animation */
+}
+
+.fly2 {
+    position: absolute;
+    width: 50px;
+    /* Adjust width as needed */
+    height: 50px;
+    /* Adjust height as needed */
+    background: url('fly.png') no-repeat center center;
+    /* Ensure correct path to fly image */
+    background-size: cover;
+    animation: flyPath2 10s alternate-reverse infinite;
+    /* Continuous animation */
+}
+
+@keyframes flyPath1 {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translate(50vw, 25vh);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(25vw, 50vh);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translate(75vw, 75vh);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(calc(50vw - 50px), calc(50vh - 50px));
+        /* End at a position near the flower */
+        opacity: 1;
+    }
+}
+
+@keyframes flyPath2 {
+    0% {
+        transform: translate(10vw, 5vh);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translate(35vw, 50vh);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translate(50vw, 65vh);
+        opacity: 0.6;
+    }
+
+    75% {
+        transform: translate(85vw, 95vh);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(calc(60vw - 50px), calc(90vh - 50px));
+        /* End at a position near the flower */
+        opacity: 1;
+    }
+}
+
+.top.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+    top: 10%;
+    flex-wrap: wrap;
+}
+
+.top.tab h5 {
+    color: rgb(147, 100, 100);
+    margin: 0 20px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    ransition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    padding: 5px 5px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top.tab h5:hover {
+    color: #ffcc00;
+    /* Hover color */
+    transform: scale(1.1);
+    /* Slightly scale up on hover */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #4b4737;
+}
+
+.top.tab h5 i {
+    margin-right: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.top.tab h5:hover i {
+    color: #ffcc00;
+    /* Change icon color on hover */
+    transform: scale(1.1);
+    /* Slightly scale up the icon on hover */
+}
+
+@media (max-width: 768px) {
+    .top.tab {
+        position: relative;
+        padding: 15px;
+    }
+
+    .top.tab h5 {
+        position: unset;
+        margin: 0px 10;
+        width: auto;
+        padding: 5px 5px;
+        border: 1px solid transparent;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
